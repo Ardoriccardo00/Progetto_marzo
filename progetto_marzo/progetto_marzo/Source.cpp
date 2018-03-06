@@ -1,17 +1,23 @@
 #include <iostream>
 using namespace::std;
 
-void main() {
+int main() {
 	string dato;
 	char sn;
 	char chiudi;
 
-	try {
-		cout << "vuoi inserire un dato? [S/N] ";
+	
+	do {  
+		                                                            
+		cout << "\n Inserisci [S, s oppure N, n]";  
 		cin >> sn;
-		if (sn == 's' || 'S' || 'n' || 'N') { cout << "ok"; }
-		else { throw "Input errato"; }
-	}
-	catch (string) { "Inserisci[S, s oppure N, n]"; }
-	cin >> chiudi;
+		
+		
+	} while (sn != 's' || sn != 'S' || sn != 'n' || sn != 'N');
+	cout << "\n corretto";                                                      
+	    cin >> chiudi;
 }
+
+
+// sn == 's' || sn == 'S' || sn == 'n' || sn == 'N'
+// sn != 's' || sn != 'S' || sn != 'n' || sn != 'N'
