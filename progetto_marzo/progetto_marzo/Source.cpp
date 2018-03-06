@@ -1,21 +1,37 @@
 #include <iostream>
+#include <conio.h>
+#include "Poll.h"
+#include <windows.h>
+
 using namespace::std;
 
 int main() {
-	string dato;
-	char sn;
-	char chiudi;
+	string Dato;
+	char Risp;
+	int Scelta;
 
+		Sleep(500);
+		cout << "\n Cosa vuoi fare?";
+		Sleep(500);
+		cout << "\n 1: visualizzare i dati ";
+		Sleep(500);
+		cout << "\n 2: inserire un dato ";
+		Sleep(500);
+		cin >> Scelta;
 	
-	do {  
-		                                                            
-		cout << "\n Inserisci [S, s oppure N, n]";  
-		cin >> sn;
-		
-		
-	} while (sn != 's' || sn != 'S' || sn != 'n' || sn != 'N');
-	cout << "\n corretto";                                                      
-	    cin >> chiudi;
+	
+		switch (Scelta)
+	{
+	case (1): cout << "\n Visualizzo i dati... ";
+		break;
+	case (2): cout << "\n Inserisci un dato... ";
+		break;
+	}
+
+
+	void inserisci(string Dato, char Risp);
+
+		_getch();
 }
 
 
