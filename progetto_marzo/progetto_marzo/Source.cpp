@@ -17,6 +17,9 @@ int main() {
 		Sleep(500);
 		cout << "\n 2: inserire un dato ";
 		Sleep(500);
+		cout << "\n 3: visualizzare il poll di default";
+		Sleep(500);
+		cout << "\n 4: creare un poll";
 		cin >> Scelta;
 	
 	
@@ -26,6 +29,11 @@ int main() {
 		break;
 	case (2): cout << "\n Inserisci un dato... ";
 		break;
+	case (3): cout << "\n Visualizzo il poll di default";
+		void pollDefault();
+		break;
+	case (4): cout << "\n Dai un nome al tuo nuovo poll";
+		string nomepoll();
 	}
 
 
