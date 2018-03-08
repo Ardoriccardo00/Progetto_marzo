@@ -24,21 +24,19 @@ int main() {
 	
 	
 		switch (Scelta)
-	{
-	case (1): cout << "\n Visualizzo i dati... ";
-		break;
-	case (2): cout << "\n Visualizzo il poll di default";
-		void pollDefault();
-		break;
-	case (3): 
-		//string s= nomePoll();
-		//void nomePoll();
-		cout << "inserisci nome poll";
-		string nomePoll();
-		cout << "\n il nome del poll è";
-		cout << "\n";
-		cout << Nome;
-	}
+		{
+		case (1): cout << "\n Visualizzo i dati... ";
+			break;
+		case (2): cout << "\n Visualizzo il poll di default";
+			void pollDefault();
+			break;
+		case (3):
+			//string s= nomePoll();
+			//void nomePoll();
+			poll p;
+			p.nomePoll();
+				
+		}
 
 
 	void inserisci(string Dato, char Risp);

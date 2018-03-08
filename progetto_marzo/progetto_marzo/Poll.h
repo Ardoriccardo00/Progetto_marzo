@@ -3,28 +3,30 @@
 #include <string>
 #include <sstream>
 #include <new>
+#include <vector>
 using namespace::std;
 
 class poll {
 private:
 	char risp;
 public:
-	string dato;
+	std::vector<string> dati;
 	string nome;
-	void inserisci(string dato, char risp);
 	void inserisci();
 	void pollDefault(string nome, string nomeDato);
-	string nomePoll(string nome);
+	void nomePoll();
 	string nomeDato();
 
 };
-void poll::inserisci() { };
-void poll::inserisci(string dato, char risp) {
+//void poll::inserisci() { };
+void poll::inserisci() {
 	do {
-		cout << "\n Inserisci il testo";
+		string dato;
+		cout << "\n Inserisci il testo ";
 		cin >> dato;
-
+		dati.push_back(dato);
 		cout << "\n Vuoi inserire un altro dato? [S/N] ";
+		char risp;
 		cin >> risp;
 	} while (risp == 'S' || risp == 's');
 
@@ -35,10 +37,12 @@ void pollDefault(string nome, string nomeDato) {
 	//cout << nomeDato;
 };
 
-string poll::nomePoll(string nome) {
-	cout << "\n Dai un nome al tuo nuovo poll";
+void poll::nomePoll() {
+	cout << "\n Dai un nome al tuo nuovo poll ";
 	string in;
 	cin >> in;
 	nome = in;
+
 	inserisci();
+
 };
