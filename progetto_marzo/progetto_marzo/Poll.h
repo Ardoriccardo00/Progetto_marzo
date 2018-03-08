@@ -14,7 +14,7 @@ public:
 	void inserisci(string dato, char risp);
 	void inserisci();
 	void pollDefault(string nome, string nomeDato);
-	string nomePoll(string nome, string nomeDato);
+	string nomePoll(string nome);
 	string nomeDato();
 
 };
@@ -31,10 +31,14 @@ void poll::inserisci(string dato, char risp) {
 };
 
 void pollDefault(string nome, string nomeDato) {
-	string nomeDato = "ciao";
-	cout << nomeDato;
+	//string nomeDato = "ciao";
+	//cout << nomeDato;
 };
 
-string nomePoll(string nome, string nomeDato) {
-
+string poll::nomePoll(string nome) {
+	cout << "\n Dai un nome al tuo nuovo poll";
+	string in;
+	cin >> in;
+	nome = in;
+	inserisci();
 };

@@ -9,17 +9,17 @@ int main() {
 	string Dato;
 	char Risp;
 	int Scelta;
+	string Nome;
 
 		Sleep(500);
 		cout << "\n Cosa vuoi fare?";
 		Sleep(500);
 		cout << "\n 1: visualizzare i dati ";
 		Sleep(500);
-		cout << "\n 2: inserire un dato ";
+		cout << "\n 2: visualizzare il poll di default";
 		Sleep(500);
-		cout << "\n 3: visualizzare il poll di default";
-		Sleep(500);
-		cout << "\n 4: creare un poll";
+		cout << "\n 3: creare un poll";
+		cout << "\n ";
 		cin >> Scelta;
 	
 	
@@ -27,13 +27,17 @@ int main() {
 	{
 	case (1): cout << "\n Visualizzo i dati... ";
 		break;
-	case (2): cout << "\n Inserisci un dato... ";
-		break;
-	case (3): cout << "\n Visualizzo il poll di default";
+	case (2): cout << "\n Visualizzo il poll di default";
 		void pollDefault();
 		break;
-	case (4): cout << "\n Dai un nome al tuo nuovo poll";
-		string nomepoll();
+	case (3): 
+		//string s= nomePoll();
+		//void nomePoll();
+		cout << "inserisci nome poll";
+		string nomePoll();
+		cout << "\n il nome del poll è";
+		cout << "\n";
+		cout << Nome;
 	}
 
 
