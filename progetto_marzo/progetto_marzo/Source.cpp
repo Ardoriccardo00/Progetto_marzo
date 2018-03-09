@@ -21,25 +21,39 @@ int main() {
 		cout << "\n 3: creare un poll";
 		cout << "\n ";
 		cin >> Scelta;
-	
-	
-		switch (Scelta)
-		{
-		case (1): cout << "\n Visualizzo i dati... ";
-			break;
-		case (2): cout << "\n Visualizzo il poll di default";
-			void pollDefault();
-			break;
-		case (3):
-			//string s= nomePoll();
-			//void nomePoll();
+
+		if (Scelta == 1) {cout << "\n Visualizzo i dati";}
+		else
+		if (Scelta == 2) {
+			poll b;
+			b.pollDefault();
+
+		}
+		else
+		if (Scelta == 3) {
 			poll p;
 			p.nomePoll();
-				
 		}
+	
+	
+		//switch (Scelta)
+		//{
+		//case (1):
+		//	cout << "\n Visualizzo i dati... ";
+		//	break;
+		//case (2): 
+		//	poll b;
+		//	b.pollDefault();
+		//	break;
+		//case (3):
+		//	poll p;
+		//	p.nomePoll();
+		//	break;
+		//		
+		//}
 
 
-	void inserisci(string Dato, char Risp);
+	//void inserisci(string Dato, char Risp);
 
 		_getch();
 }
