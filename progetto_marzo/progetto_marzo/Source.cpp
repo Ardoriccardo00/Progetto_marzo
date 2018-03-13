@@ -11,8 +11,9 @@ int main() {
 	int Scelta;
 	string Nome;
 
+	do {
 		Sleep(500);
-		cout << "\n Cosa vuoi fare?";
+		cout << "\n\n Cosa vuoi fare?";
 		Sleep(500);
 		cout << "\n 1: visualizzare i dati ";
 		Sleep(500);
@@ -22,18 +23,20 @@ int main() {
 		cout << "\n ";
 		cin >> Scelta;
 
-		if (Scelta == 1) {cout << "\n Visualizzo i dati";}
+		if (Scelta == 1) { cout << "\n Visualizzo i dati"; }
 		else
-		if (Scelta == 2) {
-			poll b;
-			b.pollDefault();
+			if (Scelta == 2) {
+				poll b;
+				b.pollDefault();
 
-		}
-		else
-		if (Scelta == 3) {
-			poll p;
-			p.nomePoll();
-		}
+			}
+			else
+				if (Scelta == 3) {
+					poll p;
+					p.nomePoll();
+				}
+		_getch();
+	} while (true);
 	
 	
 		//switch (Scelta)
@@ -55,7 +58,7 @@ int main() {
 
 	//void inserisci(string Dato, char Risp);
 
-		_getch();
+		
 }
 
 
