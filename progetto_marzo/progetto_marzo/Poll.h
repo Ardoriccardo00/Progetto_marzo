@@ -12,12 +12,12 @@ private:
 	string dato;
 public:
 	std::vector<string> dati;
-	string nome
+	string nome;
 	void nomePoll();
 };
 
 // Funzione che ti permette di dare un nome ad un nuovo poll
-void titoloPoll::nomePoll() {
+void creaPoll::nomePoll() {
 	cout << "\n Dai un nome al tuo nuovo poll ";
 	string in;
 	cin >> in;
@@ -25,19 +25,17 @@ void titoloPoll::nomePoll() {
 };
 
 
-
-};
-
 class creaPoll : public titoloPoll {
 private:
 	char risp;
 	string dato;
 public:
 	void inserisci();
+	void nomePoll();
 
 };
 // Funzione che ti permettere di inserire dati nel poll
-void poll::inserisci() {
+void creaPoll::inserisci() {
 	do {
 		cout << "\n Inserisci il testo ";
 		cin >> dato;
@@ -47,8 +45,8 @@ void poll::inserisci() {
 		cin >> risp;
 	} while (risp == 'S' || risp == 's');
 
-class DefaultPoll {};
-//// Funzione che ti permette di visualizzare il poll di default (poll di test)
+//class DefaultPoll {};
+// Funzione che ti permette di visualizzare il poll di default (poll di test)
 //void poll::pollDefault() {
 //	cout << "\n Visualizzazione poll di default";
 //	string in;
@@ -58,7 +56,7 @@ class DefaultPoll {};
 //	inserisciDefault();
 //};
 //
-//// Seconda fase del poll di default
+// Seconda fase del poll di default
 //void poll::inserisciDefault() {
 //	do {
 //		string dato;
