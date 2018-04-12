@@ -8,11 +8,6 @@ using namespace::std;
 int main() {
 	//variabili del main
 	int Scelta;
-	//variabili da passare
-	bool Login;
-	int PollDisponibili;
-	string Username;
-	string Password;
 
 	do {
 		Sleep(500);
@@ -30,7 +25,7 @@ int main() {
 
 		if (Scelta == 1) {
 			cout << "\n Visualizzo i poll presenti";
-			Poll Visualizza = new Poll (Login,Username,Password);
+			/*Poll Visualizza = new Poll (Login,Username,Password);*/
 		}
 		else
 			if (Scelta == 2) {
