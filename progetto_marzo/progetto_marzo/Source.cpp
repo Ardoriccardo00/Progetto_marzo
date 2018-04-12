@@ -1,3 +1,4 @@
+//PROGRAMMA VECCHIO
 #include <iostream>
 #include <conio.h>
 #include "Poll.h"
@@ -10,6 +11,7 @@ int main() {
 	char Risp;
 	int Scelta;
 	string Nome;
+	Poll p;
 
 	do {
 		Sleep(500);
@@ -26,13 +28,13 @@ int main() {
 		if (Scelta == 1) { cout << "\n Visualizzo i dati"; }
 		else
 			if (Scelta == 2) {
-				poll b;
-				b.pollDefault();
+				Poll p = new Poll;
+				p.pollDefault();
 
 			}
 			else
 				if (Scelta == 3) {
-					poll p;
+					
 					p.nomePoll();
 				}
 		_getch();
