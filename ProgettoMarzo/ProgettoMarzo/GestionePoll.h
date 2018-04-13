@@ -59,7 +59,7 @@ public:
 			Sleep(500);
 			cout << "\nInserisci il tag per il poll ";
 			Sleep(500);
-			Poll(Login, Tag, NomePoll);
+			//Poll(Login, Tag, NomePoll);
 		}
 	}
 

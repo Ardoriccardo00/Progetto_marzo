@@ -8,10 +8,14 @@ using namespace::std;
 int main() {
 	//variabili del main
 	int Scelta;
+	string parolaMenu[4]{ "M","e","n","u" };
+	string parolaMenuPrincipale[16]{"M","e","n","u","", "P","r","i","n","c","i","p","a","l","e" };
+	string parolaVisualizzaIPoll[15]{ "V","i","s","u","a","l","i","z","z","a","i","p","o","l","l" }
 
 	do {
+		cout << "\n\n" ;
 		Sleep(500);
-		cout << "\n\n Menu principale";
+		for (int i = 0; i < 16; i++) { cout << parolaMenuPrincipale[i]; Sleep(100); }
 		Sleep(500);
 		cout << "\n 1: Visualizza i poll ";
 		Sleep(500);
