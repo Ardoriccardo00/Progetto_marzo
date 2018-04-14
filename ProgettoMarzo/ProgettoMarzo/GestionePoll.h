@@ -19,7 +19,7 @@ private:
 
 public:
 	Poll() {};
-	Poll(bool PLogin,string PTag,string PNomePoll,vector <string>) {};
+	Poll(bool PLogin, string PTag, string PNomePoll, vector <string>) {};
 	Poll(bool PLogin, string PUsername, string PPassword, string PTag, string PNomePoll, vector<string> PScelte, vector<string> PVoti)
 	{
 		_login = PLogin;
@@ -46,20 +46,27 @@ public:
 	string get_nomePoll() { return _nomePoll; }
 	vector<string> get_scelte() { return _scelte; }
 	vector<string> get_voti() { return _voti; }
+	Poll(string NomePoll,string Tag, vector <string> Scelte) {};
 
-	void CreaPoll(bool Login, string Tag, string NomePoll ) 
+	void CreaPoll(string NomePoll,string Tag, bool Login ) 
 	{
+
 		if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
 		else
 		{
+			//Sleep(500);
+			//cout << "\nInserisci il nome del poll... ";
+			//Sleep(500);
+			//cin >> NomePoll;
+			//Sleep(500);
+			//cout << "\nInserisci il tag per il poll ";
+			//Sleep(500);
+
+			vector<Poll>poll;
 			Sleep(500);
-			cout << "\nInserisci il nome del poll... ";
-			Sleep(500);
-			cin >> NomePoll;
-			Sleep(500);
-			cout << "\nInserisci il tag per il poll ";
-			Sleep(500);
-			//Poll(Login, Tag, NomePoll);
+			cout << "\nInserisci il nome del poll, il tag e le scelte";
+			Poll nomepoll("poll1", Tag);
+
 		}
 	}
 
