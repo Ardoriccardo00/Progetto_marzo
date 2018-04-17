@@ -46,7 +46,16 @@ public:
 	string get_nomePoll() { return _nomePoll; }
 	vector<string> get_scelte() { return _scelte; }
 	vector<string> get_voti() { return _voti; }
-	Poll(string NomePoll,string Tag, vector <string> Scelte) {};
+	Poll(string NomePoll,string Tag, vector <string> Scelte) {
+
+		_nomePoll = NomePoll;
+		_tag = Tag;
+
+		for(int i = 0; i < Scelte.size(); i++)
+		{
+			Scelte.push_back(_scelte[i]);
+		}
+	};
 
 	void CreaPoll(string NomePoll,string Tag, bool Login ) 
 	{
@@ -61,11 +70,25 @@ public:
 			//Sleep(500);
 			//cout << "\nInserisci il tag per il poll ";
 			//Sleep(500);
+			vector<string>scelte;
+			char s;
+			do{
+				string str;
+				cout << "dammi una scelta" << endl;
+				cin >> str;
+				scelte.push_back(str);
+				cout << "vuoi inserire ancora?(s/n)" << endl;
+				cin >> s;
 
-			vector<Poll>poll;
+				if(s= 's' || 'S'){}
+
+				else { cout << "Errore"; return; }
+
+			} while (s == 's' || 'S');
+			
 			Sleep(500);
 			cout << "\nInserisci il nome del poll, il tag e le scelte";
-			Poll nomepoll("poll1", Tag);
+			Poll nomepoll(NomePoll, Tag, scelte);
 
 		}
 	}
