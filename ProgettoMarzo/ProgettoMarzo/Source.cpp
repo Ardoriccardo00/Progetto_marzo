@@ -57,7 +57,6 @@ int main() {
 			}
 			else
 				if (Scelta == 3) {
-					cout << "\n Esegui il login o registrati";
 				}
 
 		_getch();

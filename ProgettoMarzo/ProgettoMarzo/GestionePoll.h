@@ -4,6 +4,7 @@
 #include <sstream>
 #include <new>
 #include <vector>
+#include "Stringhe.h"
 using namespace::std;
 
 class Poll {
@@ -86,7 +87,27 @@ public:
 
 		}
 	}
+	Poll(string Username, string Password, bool Login) {
+		_username = Username;
+		_password = Password;
+		_login = Login;
+	}
+	void login(string Username, string Password, bool Login) 
+	{
+		int scelta;
+		Stringhe s;
+		s.parolaLogin();
+		cin >> scelta;
 
-	void AddVoto() {}
+		if (scelta == 1) {
+			cout << "\n";
+			s.parolaUsername(); cout << "\n";
+			cin >> Username;
+			s.parolaPassword(); cout << "\n";
+			cin >> Password;
+			s.parolaCreato(); cout << "\n";
+			Login = true;
+		}
+	}
 
 };
