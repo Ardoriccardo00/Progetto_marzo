@@ -63,13 +63,7 @@ public:
 		if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
 		else
 		{
-			//Sleep(500);
-			//cout << "\nInserisci il nome del poll... ";
-			//Sleep(500);
-			//cin >> NomePoll;
-			//Sleep(500);
-			//cout << "\nInserisci il tag per il poll ";
-			//Sleep(500);
+
 			vector<string>scelte;
 			char s;
 			do{
