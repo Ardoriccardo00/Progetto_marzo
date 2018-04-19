@@ -61,6 +61,7 @@ int main() {
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";
 				cout << "\n Ciao Colombo, Piccolo Easter Egg";
+				cout << "\n Ciao Colombo, Piccolo Easter Egg";
 				Poll p;
 				p.CreaPoll(login);
 
