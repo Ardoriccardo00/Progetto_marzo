@@ -63,6 +63,8 @@ int main() {
 				cout << "\n Ciao Colombo, Piccolo Easter Egg";
 				cout << "\n Ciao Colombo, Piccolo Easter Egg";
 				cout << "\n Ciao Colombo, Piccolo Easter Egg";
+				cout << "\n Ciao Colombo, Piccolo Easter Egg";
+				
 				Poll p;
 				p.CreaPoll(login);
 
