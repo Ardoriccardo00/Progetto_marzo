@@ -4,7 +4,7 @@
 #include <sstream>
 #include <new>
 #include <vector>
-#include "Stringhe.h"
+//#include "Stringhe.h"
 using namespace::std;
 
 class Poll {
@@ -47,67 +47,76 @@ public:
 	string get_nomePoll() { return _nomePoll; }
 	vector<string> get_scelte() { return _scelte; }
 	vector<string> get_voti() { return _voti; }
-	Poll(string NomePoll,string Tag, vector <string> Scelte) {
+	Poll(string NomePoll, string Tag, vector <string> Scelte) {
 
 		_nomePoll = NomePoll;
 		_tag = Tag;
 
-		for(int i = 0; i < Scelte.size(); i++)
+		for (int i = 0; i < Scelte.size(); i++)
 		{
-			Scelte.push_back(_scelte[i]);
+			_scelte.push_back(Scelte[i]);
 		}
 	};
 
-	void CreaPoll(string NomePoll,string Tag, bool Login ) 
+	void CreaPoll(bool Login)
 	{
 
-		if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
-		else
-		{
+		//if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
+		//else
+		//{
+		//	if (Login == true) {
 
-			vector<string>scelte;
-			char s;
-			do{
-				string str;
-				cout << "dammi una scelta" << endl;
-				cin >> str;
-				scelte.push_back(str);
-				cout << "vuoi inserire ancora?(s/n)" << endl;
-				cin >> s;
-
-				if(s= 's' || 'S'){}
-
-				else { cout << "Errore"; return; }
-
-			} while (s == 's' || 'S');
-			
-			Sleep(500);
-			cout << "\nInserisci il nome del poll, il tag e le scelte";
-			Poll nomepoll(NomePoll, Tag, scelte);
-
+		vector<string>scelte;
+		int aa = 1;
+		while (aa == 1) {
+			string str;
+			cout << "dammi una scelta" << endl;
+			cin >> str;
+			scelte.push_back(str);
+			cout << "vuoi inserire ancora?(1/0)" << endl;
+			cin >> aa;
 		}
+		cout << "dammi il nome";
+		string NomePoll, Tag;
+		cin >> NomePoll;
+		cin >> Tag;
+		Sleep(500);
+		Poll p(NomePoll, Tag, scelte);
+
+		/*		}
+		}*/
 	}
 	Poll(string Username, string Password, bool Login) {
 		_username = Username;
 		_password = Password;
 		_login = Login;
 	}
-	void login(string Username, string Password, bool Login) 
+	void login(string Username, string Password, bool Login)
 	{
 		int scelta;
-		Stringhe s;
-		s.parolaLogin();
+		cout << "\n Scegli se iscriverti [1] o fare il login [2]";
+		/*parole s;*/
+		/*s.parolaLogin();*/
 		cin >> scelta;
 
 		if (scelta == 1) {
 			cout << "\n";
-			s.parolaUsername(); cout << "\n";
+			/*s.parolaUsername(); cout << "\n";*/
 			cin >> Username;
-			s.parolaPassword(); cout << "\n";
+			/*s.parolaPassword(); cout << "\n";*/
 			cin >> Password;
-			s.parolaCreato(); cout << "\n";
+			/*s.parolaCreato(); cout << "\n";*/
 			Login = true;
 		}
+		else if (scelta == 2)
+		{
+			Login = true;
+		}
+	}
+	Poll(string Tag) { _tag = Tag; }
+	void VisualizzaTag()
+	{
+		cout << "\n Ecco la lista dei tag: ";
 	}
 
 };

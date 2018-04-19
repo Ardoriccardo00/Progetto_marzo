@@ -7,8 +7,9 @@
 #include <Windows.h>
 using namespace::std;
 
-class Stringhe {
+class String{
 public:
+	String() {};
 	void cancelletti() {string cancelletti[25]{ "#","#", "#", "#", "#", "#", "#", "#", "#", "#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#", }; for (int i = 0; i < 25; i++) { cout << cancelletti[i]; Sleep(50); }}
 	void parolaMenuPrincipale() { string parolaMenuPrincipale[17]{ "M","e","n","u ","", "P","r","i","n","c","i","p","a","l","e:","        #" } ;for (int i = 0; i < 17; i++) { cout << parolaMenuPrincipale[i]; Sleep(50); }}
 	void parolaVisualizzaIPoll() { string parolaVisualizzaIPoll[16]{ "V","i","s","u","a","l","i","z","z","a ","i ","p","o","l","l","   #" }; for (int i = 0; i < 16; i++) { cout << parolaVisualizzaIPoll[i]; Sleep(50); }}
@@ -20,9 +21,4 @@ public:
 	void parolaUsername() { string parolaUsername[19]{ "I","n","s","e","r","i","s","c","i ","u","n ","u","s","e","r","n","a","m","e " }; for (int i = 0; i < 23; i++) { cout << parolaUsername[i]; Sleep(50); }}
 	void parolaPassword() { string parolaPassword[20]{ "I","n","s","e","r","i","s","c","i ","u","n","a ","p","a","s","s","w","o","r", "d" }; for (int i = 0; i < 23; i++) { cout << parolaPassword[i]; Sleep(50); }}
 	void parolaCreato() { string parolaCreato[13]{ "A","c","c","o","u","n","t ","c","r","e","a","t","o " }; for (int i = 0; i < 23; i++) { cout << parolaCreato[i]; Sleep(50); }}
-
-
-
-
-
 };

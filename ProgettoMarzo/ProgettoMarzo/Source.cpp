@@ -8,7 +8,7 @@
 #include <Windows.h>
 #include <conio.h>
 #include "GestionePoll.h"
-#include "Stringhe.h"
+#include "Scritte.h"
 
 using namespace::std;
 
@@ -16,10 +16,18 @@ int main() {
 	//variabili del main
 	int Scelta;
 	string Capo[1]{ "\n" };
+	string nomepoll;
+	string tag;
+	string username;
+	string password;
+	bool login = false;
+	/*string NomePoll, string Tag, bool Login*/
+
+
 	do {
 		cout << "\n\n";
 		Sleep(500);
-		Stringhe s;
+		Scritte s;
 		s.cancelletti();
 		cout << "\n";
 		Sleep(500);
@@ -47,16 +55,19 @@ int main() {
 			Capo[1];
 			s.cancelletti();
 			Capo[1];
+
 		}
 		else
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";
-				Poll crea;
-		
-				
+				Poll p;
+				p.CreaPoll(nomepoll, tag, login);
+
 			}
 			else
 				if (Scelta == 3) {
+					Poll crea;
+					crea.login(username, password, login);
 				}
 
 		_getch();

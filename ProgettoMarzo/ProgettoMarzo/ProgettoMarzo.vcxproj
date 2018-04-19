@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GestionePoll.h" />
+    <ClInclude Include="Scritte.h" />
     <ClInclude Include="Stringhe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
