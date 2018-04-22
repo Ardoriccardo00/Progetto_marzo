@@ -61,7 +61,7 @@ int main() {
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";
 				Poll p;
-				p.CreaPoll(nomepoll, tag, login);
+				p.CreaPoll(login);
 
 			}
 			else
