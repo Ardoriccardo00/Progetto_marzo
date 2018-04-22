@@ -26,7 +26,7 @@ int main() {
 	/*string NomePoll, string Tag, bool Login*/
 
 
-	do {
+	do {                 // Inizio animazione del menu' (Notare che il programma termina solo con la scelta 4)
 		cout << "\n\n";
 		Sleep(500);
 		Scritte s;
@@ -53,6 +53,8 @@ int main() {
 		cout << "\n";
 		cin >> Scelta;
 
+		// Inizio delle scelte
+		// scelta 1
 		if (Scelta == 1) {
 			Capo[1];
 			s.cancelletti();
@@ -60,6 +62,7 @@ int main() {
 
 		}
 		else
+			// Scelta 2
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";	
 				Poll p;
@@ -67,6 +70,7 @@ int main() {
 
 			}
 			else
+				// Scelta 3
 				if (Scelta == 3) 
 				{
 					int a;
@@ -74,8 +78,8 @@ int main() {
 
 					cout << "Hai già un profilo o vuoi registrarti? (1/0) \t";
 					cin >> a;
-
-				if (a=0) {
+				// Scelta tra Login [0] o registrazione [1]
+				if (a==0) {
 					Login l1;
 					bool status = l1.LoginCorretto();
 					if (!status)
@@ -90,7 +94,7 @@ int main() {
 						_getch();
 					}
 				}
-				else if (a = 1) {
+				else if (a == 1) {
 					
 					Register l2;
 					bool statur = l2.NewRegister();
@@ -100,7 +104,7 @@ int main() {
 
 
 		_getch();
-	} while (Scelta != 4);
+	} while (Scelta != 4); // Scelta 4 = chiusura del programma
 
 }
 
