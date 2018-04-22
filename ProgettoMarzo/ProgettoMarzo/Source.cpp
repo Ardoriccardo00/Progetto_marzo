@@ -9,6 +9,8 @@
 #include <conio.h>
 #include "GestionePoll.h"
 #include "Scritte.h"
+#include "Login.h"
+#include "Register.h"
 
 using namespace::std;
 
@@ -59,16 +61,43 @@ int main() {
 		}
 		else
 			if (Scelta == 2) {
-				cout << "\n Crea un poll (devi prima essere iscritto)";
+				cout << "\n Crea un poll (devi prima essere iscritto)";	
 				Poll p;
 				p.CreaPoll(login);
 
 			}
 			else
-				if (Scelta == 3) {
-					Poll crea;
-					crea.login(username, password, login);
+				if (Scelta == 3) 
+				{
+					int a;
+					Login l1;
+
+					cout << "Hai già un profilo o vuoi registrarti? (1/0) \t";
+					cin >> a;
+
+				if (a=0) {
+					Login l1;
+					bool status = l1.LoginCorretto();
+					if (!status)
+					{
+						cout << "\n\tDati Inseriti Errati\n";
+
+						_getch();
+					}
+					else
+					{
+						cout << "\n\t Benvenuto! " << l1.username << " !\n";
+						_getch();
+					}
 				}
+				else if (a = 1) {
+					
+					Register l2;
+					bool statur = l2.NewRegister();
+					return 0;
+				};
+				}
+
 
 		_getch();
 	} while (Scelta != 4);

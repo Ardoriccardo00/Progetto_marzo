@@ -119,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GestionePoll.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="Register.h" />
     <ClInclude Include="Scritte.h" />
     <ClInclude Include="Stringhe.h" />
   </ItemGroup>
