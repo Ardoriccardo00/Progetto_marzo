@@ -23,9 +23,6 @@
     <ClInclude Include="GestionePoll.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Stringhe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Scritte.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -33,6 +30,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Register.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Secret.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include "Secret.h"
 #include <sstream>
 #include <new>
 #include <vector>
@@ -62,7 +63,7 @@ int main() {
 
 		}
 		else
-			// Scelta 2
+			// Scelta 2: CREAZIONE DI POLL
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";	
 				Poll p;
@@ -70,13 +71,13 @@ int main() {
 
 			}
 			else
-				// Scelta 3
+				// Scelta 3: REGISTRAZIONE/LOGIN
 				if (Scelta == 3) 
 				{
 					int a;
 					Login l1;
 
-					cout << "Hai già un profilo o vuoi registrarti? (1/0) \t";
+					cout << "Vuoi registrarti o hai gia' un profilo? (1/0) \t";
 					cin >> a;
 				// Scelta tra Login [0] o registrazione [1]
 				if (a==0) {
@@ -98,11 +99,18 @@ int main() {
 					
 					Register l2;
 					bool statur = l2.NewRegister();
-					return 0;
+					if (l2.NewRegister() == true) { login = true; }
 				};
+				
 				}
 
+				else {
+					if (Scelta == 5) { Secret s;
+					s.scritta();
+					}
 
+			}
+			
 		_getch();
 	} while (Scelta != 4); // Scelta 4 = chiusura del programma
 

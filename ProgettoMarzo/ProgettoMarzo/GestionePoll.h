@@ -47,6 +47,7 @@ public:
 	string get_nomePoll() { return _nomePoll; }
 	vector<string> get_scelte() { return _scelte; }
 	vector<string> get_voti() { return _voti; }
+	//Costruttore Poll per CreaPoll
 	Poll(string NomePoll, string Tag, vector <string> Scelte) {
 
 		_nomePoll = NomePoll;
@@ -58,61 +59,15 @@ public:
 		}
 	};
 
-	void CreaPoll(bool Login)
-	{
+	//Definizione metodo CreaPoll nella classe
+	void CreaPoll(bool Login); 
 
-		//if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
-		//else
-		//{
-		//	if (Login == true) {
-
-		vector<string>scelte;
-		int aa = 1;
-		while (aa == 1) {
-			string str;
-			cout << "dammi una scelta" << endl;
-			cin >> str;
-			scelte.push_back(str);
-			cout << "vuoi inserire ancora?(1/0)" << endl;
-			cin >> aa;
-		}
-		cout << "dammi il nome";
-		string NomePoll, Tag;
-		cin >> NomePoll;
-		cin >> Tag;
-		Sleep(500);
-		Poll p(NomePoll, Tag, scelte);
-
-		/*		}
-		}*/
-	}
 	Poll(string Username, string Password, bool Login) {
 		_username = Username;
 		_password = Password;
 		_login = Login;
 	}
-	void login(string Username, string Password, bool Login)
-	{
-		int scelta;
-		cout << "\n Scegli se iscriverti [1] o fare il login [2]";
-		/*parole s;*/
-		/*s.parolaLogin();*/
-		cin >> scelta;
 
-		if (scelta == 1) {
-			cout << "\n";
-			/*s.parolaUsername(); cout << "\n";*/
-			cin >> Username;
-			/*s.parolaPassword(); cout << "\n";*/
-			cin >> Password;
-			/*s.parolaCreato(); cout << "\n";*/
-			Login = true;
-		}
-		else if (scelta == 2)
-		{
-			Login = true;
-		}
-	}
 	Poll(string Tag) { _tag = Tag; }
 	void VisualizzaTag()
 	{
@@ -120,3 +75,93 @@ public:
 	}
 
 };
+
+//Metodo CreaPoll
+void Poll::CreaPoll(bool Login)
+{
+
+	if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
+	else
+	{
+		if (Login == true) {
+
+	vector<string>scelte;
+	int aa = 1;
+	while (aa == 1) {
+		string str;
+		cout << "dammi una scelta" << endl;
+		cin >> str;
+		scelte.push_back(str);
+		cout << "vuoi inserire ancora?(1/0)" << endl;
+		cin >> aa;
+	}
+	cout << "\nInserisci il nome ";
+	cout << "\n";
+	string NomePoll, Tag;
+	cin >> NomePoll;
+	cout << "\nInserisci il tag ";
+	cout << "\n";
+	cin >> Tag;
+	Sleep(500);
+	Poll p(NomePoll, Tag, scelte);
+
+		}
+	}
+}
+
+
+
+
+
+
+//void login(string Username, string Password, bool Login)
+//{
+//	int scelta;
+//	cout << "\n Scegli se iscriverti [1] o fare il login [2]";
+//	/*parole s;*/
+//	/*s.parolaLogin();*/
+//	cin >> scelta;
+//
+//	if (scelta == 1) {
+//		cout << "\n";
+//		/*s.parolaUsername(); cout << "\n";*/
+//		cin >> Username;
+//		/*s.parolaPassword(); cout << "\n";*/
+//		cin >> Password;
+//		/*s.parolaCreato(); cout << "\n";*/
+//		Login = true;
+//	}
+//	else if (scelta == 2)
+//	{
+//		Login = true;
+//	}
+//}
+
+//void CreaPoll(bool Login)
+//{
+
+//	//if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
+//	//else
+//	//{
+//	//	if (Login == true) {
+
+//	vector<string>scelte;
+//	int aa = 1;
+//	while (aa == 1) {
+//		string str;
+//		cout << "dammi una scelta" << endl;
+//		cin >> str;
+//		scelte.push_back(str);
+//		cout << "vuoi inserire ancora?(1/0)" << endl;
+//		cin >> aa;
+//	}
+//	cout << "dammi il nome";
+//	string NomePoll, Tag;
+//	cin >> NomePoll;
+//	cin >> Tag;
+//	Sleep(500);
+//	Poll p(NomePoll, Tag, scelte);
+
+//	/*		}
+//	}*/
+//}

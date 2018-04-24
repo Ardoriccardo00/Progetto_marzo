@@ -26,5 +26,6 @@ public:
 		cin >> newpassword;
 
 		return true;
+
 };
 
