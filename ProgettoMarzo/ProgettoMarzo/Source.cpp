@@ -43,10 +43,10 @@ int main() {
 		cout << "\n 2: ";
 		s.parolaCreaUnPoll();
 		Sleep(500);
+		//cout << "\n 3: ";
+		//s.parolaLogin();
+		//Sleep(500);
 		cout << "\n 3: ";
-		s.parolaLogin();
-		Sleep(500);
-		cout << "\n 4: ";
 		s.parolaEsci();
 		Sleep(500);
 		cout << "\n";
@@ -67,52 +67,14 @@ int main() {
 			if (Scelta == 2) {
 				cout << "\n Crea un poll (devi prima essere iscritto)";	
 				Poll p;
-				p.CreaPoll(login);
+				p.CreaPoll();
 
 			}
-			else
-				// Scelta 3: REGISTRAZIONE/LOGIN
-				if (Scelta == 3) 
-				{
-					int a;
-					Login l1;
 
-					cout << "Vuoi registrarti o hai gia' un profilo? (1/0) \t";
-					cin >> a;
-				// Scelta tra Login [0] o registrazione [1]
-				if (a==0) {
-					Login l1;
-					bool status = l1.LoginCorretto();
-					if (!status)
-					{
-						cout << "\n\tDati Inseriti Errati\n";
 
-						_getch();
-					}
-					else
-					{
-						cout << "\n\t Benvenuto! " << l1.username << " !\n";
-						_getch();
-					}
-				}
-				else if (a == 1) {
-					
-					Register l2;
-					bool statur = l2.NewRegister();
-					if (l2.NewRegister() == true) { login = true; }
-				};
-				
-				}
-
-				else {
-					if (Scelta == 5) { Secret s;
-					s.scritta();
-					}
-
-			}
 			
 		_getch();
-	} while (Scelta != 4); // Scelta 4 = chiusura del programma
+	} while (Scelta != 3); // Scelta 3 = chiusura del programma
 
 }
 
@@ -125,3 +87,37 @@ int main() {
 //string parolaLogin[17]{ "L","o","g","i","n", "/","r","e","g","i","s","t","r","a","t","i","    #" };
 //string parolaEsci[17]{ "E","s","c","i ","d", "a","l ","p","r","o","g","r","a","m","m","a","  #" };
 //string parolaVisualizzo[23]{ "V","i","s","u","a", "l","i","z","z","o ","i ","p","o","l","l ","p","r","e","s","e","n","t","i " };
+
+//else
+//	// Scelta 3: REGISTRAZIONE/LOGIN
+//	if (Scelta == 3) 
+//	{
+//		int a;
+//		Login l1;
+
+//		cout << "Vuoi registrarti o hai gia' un profilo? (1/0) \t";
+//		cin >> a;
+//	// Scelta tra Login [0] o registrazione [1]
+//	if (a==0) {
+//		Login l1;
+//		bool status = l1.LoginCorretto();
+//		if (!status)
+//		{
+//			cout << "\n\tDati Inseriti Errati\n";
+
+//			_getch();
+//		}
+//		else
+//		{
+//			cout << "\n\t Benvenuto! " << l1.username << " !\n";
+//			_getch();
+//		}
+//	}
+//	else if (a == 1) {
+//		
+//		Register l2;
+//		bool statur = l2.NewRegister();
+//		if (l2.NewRegister() == true) { login = true; }
+//	};
+//	
+//	}

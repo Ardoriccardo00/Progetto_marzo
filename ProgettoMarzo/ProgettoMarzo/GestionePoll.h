@@ -60,7 +60,7 @@ public:
 	};
 
 	//Definizione metodo CreaPoll nella classe
-	void CreaPoll(bool Login); 
+	void CreaPoll(); 
 
 	Poll(string Username, string Password, bool Login) {
 		_username = Username;
@@ -74,16 +74,17 @@ public:
 		cout << "\n Ecco la lista dei tag: ";
 	}
 
+	void VisualizzaPoll();
 };
 
 //Metodo CreaPoll
-void Poll::CreaPoll(bool Login)
+void Poll::CreaPoll()
 {
 
-	if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
-	else
-	{
-		if (Login == true) {
+	//if (Login == false) { Sleep(500); cout << "\n Per creare un poll ti devi prima iscrivere "; }
+	//else
+	//{
+	//	if (Login == true) {
 
 	vector<string>scelte;
 	int aa = 1;
@@ -105,11 +106,15 @@ void Poll::CreaPoll(bool Login)
 	Sleep(500);
 	Poll p(NomePoll, Tag, scelte);
 
-		}
-	}
+	//	}
+	//}
 }
 
+void Poll::VisualizzaPoll() 
+{
+	cout << "Inserisci un tag che vuoi visualizzare: ";
 
+}
 
 
 
