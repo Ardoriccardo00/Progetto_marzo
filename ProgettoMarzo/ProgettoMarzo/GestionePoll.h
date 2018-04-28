@@ -105,14 +105,30 @@ void Poll::CreaPoll()
 	cin >> Tag;
 	Sleep(500);
 	Poll p(NomePoll, Tag, scelte);
-
+	_nomePoll = NomePoll;
+	_tag = Tag;
+	cout << "\n Vuoi visualizzare il poll? [1/0] ";
+	int dd;
+	cin >> dd;
+	if (dd == 1) {
+		cout << "\n";
+	cout << NomePoll;
+	cout << "\n";
+	cout << Tag;
+	}
 	//	}
 	//}
 }
 
 void Poll::VisualizzaPoll() 
 {
-	cout << "Inserisci un tag che vuoi visualizzare: ";
+	cout << "\nEcco il poll creato ";
+	cout << "\n";
+	cout << _nomePoll;
+	cout << _tag;
+	
+
+
 
 }
 

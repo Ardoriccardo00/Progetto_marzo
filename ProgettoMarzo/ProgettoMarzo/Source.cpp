@@ -23,6 +23,7 @@ int main() {
 	string tag;
 	string username;
 	string password;
+	int ii;
 	bool login = false;
 	/*string NomePoll, string Tag, bool Login*/
 
@@ -60,15 +61,20 @@ int main() {
 			Capo[1];
 			s.cancelletti();
 			Capo[1];
-
+			Poll p;
+			p.VisualizzaPoll();
 		}
 		else
 			// Scelta 2: CREAZIONE DI POLL
 			if (Scelta == 2) {
-				cout << "\n Crea un poll (devi prima essere iscritto)";	
-				Poll p;
-				p.CreaPoll();
-
+				do {
+					cout << "\n Crea un poll";
+					cout << "\n";
+					Poll p;
+					p.CreaPoll();
+					cout << "\n Vuoi un altro poll? [1/0] ";
+					cin >> ii;
+				} while (ii == 1);
 			}
 
 
