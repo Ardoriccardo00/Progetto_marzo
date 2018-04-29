@@ -127,9 +127,6 @@ void Poll::VisualizzaPoll()
 	cout << _nomePoll;
 	cout << _tag;
 	
-
-
-
 }
 
 
