@@ -14,7 +14,7 @@
 using namespace::std;
 
 int main() {
-	//variabili del main
+	//variabili del maindd
 	int Scelta;
 	string Capo[1]{ "\n" };
 	string nomepoll;
